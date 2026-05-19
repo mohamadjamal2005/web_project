@@ -8,7 +8,8 @@ interface FakeUser extends AuthUser {
 export const users: FakeUser[] = [
   {
     id: 1,
-    name: "Ahmad Jamal",
+    firstName: "Ahmad",
+    lastName: "Jamal",
     email: "ahamadjamal@student.mjxschool.com",
     username: "ahamadjamal",
     password: "123456",
@@ -17,7 +18,8 @@ export const users: FakeUser[] = [
 
   {
     id: 2,
-    name: "John Doe",
+    firstName: "John",
+    lastName: "Doe",
     email: "johndoe@instructor.mjxschool.com",
     username: "johndoe",
     password: "234567",
@@ -26,7 +28,8 @@ export const users: FakeUser[] = [
 
   {
     id: 3,
-    name: "Rachid Idris",
+    firstName: "Rachid",
+    lastName: "Idris",
     email: "rachididris@admin.mjxschool.com",
     username: "rachididris",
     password: "345678",
