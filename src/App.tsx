@@ -9,10 +9,7 @@ import AuthLayout from "./layouts/AuthLayout";
 import MainLayout from "./layouts/MainLayout";
 
 import Login from "./pages/auth/Login";
-
-import StudentDashboard from "./pages/student/StudentDashboard";
-import InstructorDashboard from "./pages/instructor/InstructorDashboard";
-import AdminDashboard from "./pages/admin/AdminDashboard";
+import Dashboard from "./pages/dashboard/Dashboard";
 
 import ProtectedRoute from "./routes/ProtectedRoute";
 
@@ -20,7 +17,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-
         {/* Auth Routes */}
         <Route element={<AuthLayout />}>
           <Route path="/login" element={<Login />} />
@@ -29,25 +25,7 @@ const App = () => {
         {/* Protected Routes */}
         <Route element={<ProtectedRoute />}>
           <Route element={<MainLayout />}>
-
-            {/* Student */}
-            <Route
-              path="/student/dashboard"
-              element={<StudentDashboard />}
-            />
-
-            {/* Instructor */}
-            <Route
-              path="/instructor/dashboard"
-              element={<InstructorDashboard />}
-            />
-
-            {/* Admin */}
-            <Route
-              path="/admin/dashboard"
-              element={<AdminDashboard />}
-            />
-
+            <Route path="/dashboard" element={<Dashboard />} />
           </Route>
         </Route>
 
