@@ -37,19 +37,7 @@ const Login = () => {
       JSON.stringify(user)
     );
 
-    switch (user.role) {
-      case "student":
-        navigate("/student/dashboard");
-        break;
-
-      case "instructor":
-        navigate("/instructor/dashboard");
-        break;
-
-      case "admin":
-        navigate("/admin/dashboard");
-        break;
-    }
+    navigate("/dashboard");
   };
 
   return (
