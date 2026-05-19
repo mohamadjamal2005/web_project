@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import mjx_school from "../../assets/mjx_school.png";
+import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+
 import { users } from "../../data/users";
 
 const Login = () => {
@@ -23,7 +27,7 @@ const Login = () => {
     );
 
     if (!user) {
-      setError("Invalid credentials");
+      setError("Invalid username or password");
       return;
     }
 
@@ -41,50 +45,105 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#3f3f3f] flex items-center justify-center px-4">
+    <div className="min-h-screen flex bg-gray-100">
 
-      <div className="bg-white w-full max-w-md p-10">
+      <div className="flex-1 flex items-center justify-center p-6">
 
-        <h1 className="text-4xl font-light mb-10 text-gray-700">
-          Login to your account
-        </h1>
+        <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl p-10">
 
-        <div className="space-y-6">
+          <div className="text-center mb-7">
 
-          <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) =>
-              setUsername(e.target.value)
-            }
-            className="w-full border-l-4 border-green-500 border border-gray-300 p-4 outline-none"
-          />
+            <div className="flex justify-center mb-6">
+                <img
+                  src={mjx_school}
+                  alt="MJX School Logo"
+                  className="h-32 object-contain"
+                />
+            </div>
 
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) =>
-              setPassword(e.target.value)
-            }
-            className="w-full border-l-4 border-green-500 border border-gray-300 p-4 outline-none"
-          />
+            <h2 className="text-4xl font-bold text-gray-800 mb-2">
+              Welcome Back
+            </h2>
 
-          {error && (
-            <p className="text-red-500">
-              {error}
+            <p className="text-gray-500">
+              Login to your account
             </p>
+
+          </div>
+
+          {/* Username */}
+          <div className="mb-6">
+
+            <label className="block text-sm font-medium text-gray-600 mb-2">
+              Username
+            </label>
+
+            <div className="flex items-center border border-gray-300 rounded-xl px-4 focus-within:border-blue-600 transition">
+
+              <PersonOutlinedIcon
+                className="text-gray-400"
+              />
+
+              <input
+                type="text"
+                placeholder="Enter username"
+                value={username}
+                onChange={(e) =>
+                  setUsername(e.target.value)
+                }
+                className="w-full p-4 outline-none bg-transparent"
+              />
+
+            </div>
+
+          </div>
+
+          {/* Password */}
+          <div className="mb-6">
+
+            <label className="block text-sm font-medium text-gray-600 mb-2">
+              Password
+            </label>
+
+            <div className="flex items-center border border-gray-300 rounded-xl px-4 focus-within:border-blue-600 transition">
+
+              <LockOutlinedIcon
+                className="text-gray-400"
+              />
+
+              <input
+                type="password"
+                placeholder="Enter password"
+                value={password}
+                onChange={(e) =>
+                  setPassword(e.target.value)
+                }
+                className="w-full p-4 outline-none bg-transparent"
+              />
+
+            </div>
+
+          </div>
+
+          {/* Error */}
+          {error && (
+            <div className="mb-6 text-red-500 text-sm">
+              {error}
+            </div>
           )}
 
-          <div className="flex justify-end">
-            <button
-              onClick={handleLogin}
-              className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 text-xl"
-            >
-              Login
-            </button>
-          </div>
+          {/* Button */}
+          <button
+            onClick={handleLogin}
+            className="w-full bg-blue-700 hover:bg-blue-800 text-white py-4 rounded-xl text-lg font-semibold transition duration-300 shadow-lg hover:shadow-xl"
+          >
+            Login
+          </button>
+
+          {/* Footer */}
+          <p className="text-center text-gray-400 text-sm mt-8">
+            © 2026 MJX School System
+          </p>
 
         </div>
 
