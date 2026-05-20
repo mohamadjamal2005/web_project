@@ -29,7 +29,7 @@ const Sidebar = () => {
         <img
           src={mjx_school}
           alt="MJX School"
-          className="h-16 object-contain"
+          className="h-32 object-contain"
         />
 
       </div>
