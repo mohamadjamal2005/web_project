@@ -1,12 +1,12 @@
-import mjx_school from "../assets/mjx_school.png";
+import mjx_school from "../../assets/mjx_school.png";
 
 import {
   studentSidebar,
   instructorSidebar,
   adminSidebar,
-} from "../data/sidebar";
+} from "../../data/sidebar";
 
-import { getUser } from "../utils/auth";
+import { getUser } from "../../utils/auth";
 
 import MenuItem from "./MenuItem";
 

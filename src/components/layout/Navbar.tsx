@@ -1,6 +1,6 @@
 import LogoutIcon from "@mui/icons-material/Logout";
 
-import { getUser, logout } from "../utils/auth";
+import { getUser, logout } from "../../utils/auth";
 
 import { useNavigate } from "react-router-dom";
 
