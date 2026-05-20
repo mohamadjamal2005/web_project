@@ -1,26 +1,28 @@
 import { Outlet } from "react-router-dom";
 
+import Sidebar from "../components/SideBar";
+import Navbar from "../components/Navbar";
+
 const MainLayout = () => {
   return (
-    <div className="min-h-screen flex">
-      {/* Sidebar */}
-      <aside className="w-64 bg-blue-700 text-white p-5">
-        <h2 className="text-2xl font-bold mb-6">
-          MJX School
-        </h2>
+    <div className="min-h-screen flex bg-gray-100">
 
-        <nav className="space-y-3">
-          <p>Dashboard</p>
-          <p>Courses</p>
-          <p>Grades</p>
-          <p>Settings</p>
-        </nav>
-      </aside>
+      {/* Sidebar */}
+      <Sidebar />
 
       {/* Main Content */}
-      <main className="flex-1 p-6 bg-gray-100">
-        <Outlet />
-      </main>
+      <div className="flex-1 flex flex-col">
+
+        {/* Navbar */}
+        <Navbar />
+
+        {/* Page Content */}
+        <main className="p-8 flex-1">
+          <Outlet />
+        </main>
+
+      </div>
+
     </div>
   );
 };
