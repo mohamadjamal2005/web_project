@@ -1,8 +1,8 @@
-import StudentDashboard from "../student/StudentDashboard";
-import InstructorDashboard from "../instructor/InstructorDashboard";
-import AdminDashboard from "../admin/AdminDashboard";
-
 import { getUser } from "../../utils/auth";
+
+import StudentDashboard from "./StudentDashboard";
+import InstructorDashboard from "./InstructorDashboard";
+import AdminDashboard from "./AdminDashboard";
 
 const Dashboard = () => {
   const user = getUser();
