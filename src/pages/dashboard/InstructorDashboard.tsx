@@ -11,12 +11,13 @@ const InstructorDashboard = () => {
     <div className="space-y-8">
 
       <div>
-        <h1 className="text-4xl font-bold text-gray-800">
-          Instructor Dashboard
+        <h1 className="text-3xl xl:text-4xl font-bold text-gray-800">
+          Welcome Back
         </h1>
 
-        <p className="text-gray-500 mt-2">
-          Manage your classes and students
+        <p className="text-gray-500 mt-2 text-lg">
+          Manage classes, monitor student performance,
+          and organize course activities efficiently.
         </p>
       </div>
 

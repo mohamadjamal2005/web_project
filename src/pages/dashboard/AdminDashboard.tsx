@@ -12,12 +12,13 @@ const AdminDashboard = () => {
     <div className="space-y-8">
 
       <div>
-        <h1 className="text-4xl font-bold text-gray-800">
-          Admin Dashboard
+        <h1 className="text-3xl xl:text-4xl font-bold text-gray-800">
+          Welcome Back
         </h1>
 
-        <p className="text-gray-500 mt-2">
-          School management overview
+        <p className="text-gray-500 mt-2 text-lg">
+          Monitor school operations, manage users,
+          and oversee the entire academic system.
         </p>
       </div>
 
