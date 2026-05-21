@@ -5,20 +5,18 @@ import AnalyticsIcon from "@mui/icons-material/Analytics";
 
 import StatCard from "../../components/dashboard/StatCard";
 import AnnouncementCard from "../../components/dashboard/AnnouncementCard";
-import QuickActionCard from "../../components/dashboard/QuickActionCard";
 
 const AdminDashboard = () => {
   return (
     <div className="space-y-8">
 
       <div>
-        <h1 className="text-3xl xl:text-4xl font-bold text-gray-800">
-          Welcome Back
+        <h1 className="text-4xl font-bold text-gray-800">
+          Admin Dashboard
         </h1>
 
-        <p className="text-gray-500 mt-2 text-lg">
-          Monitor school operations, manage users,
-          and oversee the entire academic system.
+        <p className="text-gray-500 mt-2">
+          School management overview
         </p>
       </div>
 
@@ -67,39 +65,6 @@ const AdminDashboard = () => {
           title="Teachers meeting scheduled"
           date="Yesterday"
         />
-
-      </div>
-
-      {/* Quick Actions */}
-      <div>
-
-        <h2 className="text-2xl font-bold mb-6">
-          Quick Actions
-        </h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-
-          <QuickActionCard
-            title="Manage Users"
-            icon={<PeopleIcon />}
-          />
-
-          <QuickActionCard
-            title="Manage Classes"
-            icon={<SchoolIcon />}
-          />
-
-          <QuickActionCard
-            title="Analytics"
-            icon={<AnalyticsIcon />}
-          />
-
-          <QuickActionCard
-            title="Reports"
-            icon={<GroupsIcon />}
-          />
-
-        </div>
 
       </div>
 

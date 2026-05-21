@@ -4,7 +4,6 @@ import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import GradeIcon from "@mui/icons-material/Grade";
 
 import StatCard from "../../components/dashboard/StatCard";
-import QuickActionCard from "../../components/dashboard/QuickActionCard";
 import AnnouncementCard from "../../components/dashboard/AnnouncementCard";
 
 const StudentDashboard = () => {
@@ -104,39 +103,6 @@ const StudentDashboard = () => {
             </div>
 
           </div>
-
-        </div>
-
-      </div>
-
-      {/* Quick Actions */}
-      <div>
-
-        <h2 className="text-2xl font-bold mb-6">
-          Quick Actions
-        </h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-
-          <QuickActionCard
-            title="Assignments"
-            icon={<AssignmentIcon />}
-          />
-
-          <QuickActionCard
-            title="Courses"
-            icon={<SchoolIcon />}
-          />
-
-          <QuickActionCard
-            title="Attendance"
-            icon={<EventAvailableIcon />}
-          />
-
-          <QuickActionCard
-            title="Grades"
-            icon={<GradeIcon />}
-          />
 
         </div>
 
