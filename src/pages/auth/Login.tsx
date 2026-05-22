@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import mjx_school from "../../assets/mjx_school.png";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
+import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined";
 
 import { users } from "../../data/users";
 
@@ -15,6 +17,9 @@ const Login = () => {
 
   const [password, setPassword] =
     useState("");
+
+  const [showPassword, setShowPassword] =
+    useState(false);
 
   const [error, setError] =
     useState("");
@@ -61,11 +66,7 @@ const Login = () => {
                 />
             </div>
 
-            <h2 className="text-4xl font-bold text-gray-800 mb-2">
-              Welcome Back
-            </h2>
-
-            <p className="text-gray-500">
+            <p className="text-gray-500 text-2xl">
               Login to your account
             </p>
 
@@ -92,6 +93,7 @@ const Login = () => {
                   setUsername(e.target.value)
                 }
                 className="w-full p-4 outline-none bg-transparent"
+                autoComplete="username"
               />
 
             </div>
@@ -105,21 +107,40 @@ const Login = () => {
               Password
             </label>
 
-            <div className="flex items-center border border-gray-300 rounded-xl px-4 focus-within:border-blue-600 transition">
+            <div className="flex items-center border border-gray-300 rounded-xl px-4 bg-gray-50 focus-within:border-blue-600 focus-within:bg-white transition-all duration-300">
 
               <LockOutlinedIcon
                 className="text-gray-400"
               />
 
               <input
-                type="password"
+                type={
+                  showPassword
+                    ? "text"
+                    : "password"
+                }
                 placeholder="Enter password"
                 value={password}
                 onChange={(e) =>
                   setPassword(e.target.value)
                 }
                 className="w-full p-4 outline-none bg-transparent"
+                autoComplete="current-password"
               />
+
+              <button
+                type="button"
+                onClick={() =>
+                  setShowPassword(!showPassword)
+                }
+                className="text-gray-400 hover:text-gray-600 transition"
+              >
+                {showPassword ? (
+                  <VisibilityOffOutlinedIcon />
+                ) : (
+                  <VisibilityOutlinedIcon />
+                )}
+              </button>
 
             </div>
 
