@@ -107,7 +107,7 @@ const Login = () => {
               Password
             </label>
 
-            <div className="flex items-center border border-gray-300 rounded-xl px-4 bg-gray-50 focus-within:border-blue-600 focus-within:bg-white transition-all duration-300">
+            <div className="flex items-center border border-gray-300 rounded-xl px-4 focus-within:border-blue-600 transition">
 
               <LockOutlinedIcon
                 className="text-gray-400"
@@ -160,11 +160,6 @@ const Login = () => {
           >
             Login
           </button>
-
-          {/* Footer */}
-          <p className="text-center text-gray-400 text-sm mt-8">
-            © 2026 MJX School System
-          </p>
 
         </div>
 
