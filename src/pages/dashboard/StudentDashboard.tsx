@@ -5,18 +5,20 @@ import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 
 import DashboardHero from "../../components/dashboard/DashboardHero";
 import StatCard from "../../components/dashboard/StatCard";
-import ProgressCard from "../../components/dashboard/ProgressCard";
 import AnalyticsChart from "../../components/dashboard/AnalyticsChart";
 import ScheduleCard from "../../components/dashboard/ScheduleCard";
 import AnnouncementCard from "../../components/dashboard/AnnouncementCard";
+
+import { users } from "../../data/users";
 
 const StudentDashboard = () => {
   return (
     <div className="space-y-8">
 
       <DashboardHero
-        title="Student Dashboard"
-        subtitle="Track your academic progress, assignments, attendance, and daily schedule in one place."
+        title={`Welcome Back, ${users[0].firstName}!`}
+        subtitle1="Grade 10 • Academic Year 2025 - 2026"
+        subtitle2="Track your academic progress, assignments, attendance, and daily schedule in one place."
       />
 
       {/* Stats */}
@@ -44,23 +46,6 @@ const StudentDashboard = () => {
           title="Average Grade"
           value="88%"
           icon={<GradeIcon fontSize="large" />}
-        />
-
-      </div>
-
-      {/* Progress */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        <ProgressCard
-          title="Attendance Progress"
-          value={92}
-          color="bg-green-500"
-        />
-
-        <ProgressCard
-          title="Academic Performance"
-          value={88}
-          color="bg-blue-600"
         />
 
       </div>
@@ -97,6 +82,90 @@ const StudentDashboard = () => {
               time="01:00 PM - 02:00 PM"
               color="border-purple-600"
             />
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* Recent Grades */}
+      <div className="bg-white rounded-2xl shadow-sm p-6">
+
+        <div className="flex items-center justify-between mb-6">
+
+          <h2 className="text-2xl font-bold text-gray-800">
+            Recent Grades
+          </h2>
+
+          <button className="text-blue-600 font-medium hover:underline">
+            View All
+          </button>
+
+        </div>
+
+        <div className="space-y-4">
+
+          {/* Grade Item */}
+          <div className="flex items-center justify-between border border-gray-100 rounded-xl p-4 hover:bg-gray-50 transition">
+
+            <div>
+
+              <h3 className="font-semibold text-gray-800">
+                Mathematics Quiz
+              </h3>
+
+              <p className="text-gray-500 text-sm mt-1">
+                Algebra & Equations
+              </p>
+
+            </div>
+
+            <div className="bg-green-100 text-green-700 px-4 py-2 rounded-xl font-bold">
+              88%
+            </div>
+
+          </div>
+
+          {/* Grade Item */}
+          <div className="flex items-center justify-between border border-gray-100 rounded-xl p-4 hover:bg-gray-50 transition">
+
+            <div>
+
+              <h3 className="font-semibold text-gray-800">
+                Physics Exam
+              </h3>
+
+              <p className="text-gray-500 text-sm mt-1">
+                Motion & Forces
+              </p>
+
+            </div>
+
+            <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-xl font-bold">
+              92%
+            </div>
+
+          </div>
+
+          {/* Grade Item */}
+          <div className="flex items-center justify-between border border-gray-100 rounded-xl p-4 hover:bg-gray-50 transition">
+
+            <div>
+
+              <h3 className="font-semibold text-gray-800">
+                Chemistry Test
+              </h3>
+
+              <p className="text-gray-500 text-sm mt-1">
+                Chemical Reactions
+              </p>
+
+            </div>
+
+            <div className="bg-purple-100 text-purple-700 px-4 py-2 rounded-xl font-bold">
+              84%
+            </div>
 
           </div>
 

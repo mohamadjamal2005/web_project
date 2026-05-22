@@ -12,14 +12,17 @@ import AnalyticsChart from "../../components/dashboard/AnalyticsChart";
 import QuickActionCard from "../../components/dashboard/QuickActionCard";
 import ActivityCard from "../../components/dashboard/ActivityCard";
 
+import { users } from "../../data/users";
+
 const AdminDashboard = () => {
   return (
     <div className="space-y-8">
 
       {/* Hero */}
       <DashboardHero
-        title="Admin Dashboard"
-        subtitle="Monitor school operations, manage users, analyze performance, and oversee the entire academic system."
+        title={`Welcome Back, ${users[2].firstName}!`}
+        subtitle1="Academic Year 2025 - 2026"
+        subtitle2="Monitor school operations, manage users, analyze performance, and oversee the entire academic system."
       />
 
       {/* Statistics */}

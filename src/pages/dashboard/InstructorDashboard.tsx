@@ -10,14 +10,17 @@ import AnalyticsChart from "../../components/dashboard/AnalyticsChart";
 import ScheduleCard from "../../components/dashboard/ScheduleCard";
 import ActivityCard from "../../components/dashboard/ActivityCard";
 
+import { users } from "../../data/users";
+
 const InstructorDashboard = () => {
   return (
     <div className="space-y-8">
 
       {/* Hero */}
       <DashboardHero
-        title="Instructor Dashboard"
-        subtitle="Manage classes, monitor student performance, review submissions, and organize course activities efficiently."
+        title={`Welcome Back, ${users[1].firstName}!`}
+        subtitle1="Academic Year 2025-2026"
+        subtitle2="Manage classes, monitor student performance, review submissions, and organize course activities efficiently."
       />
 
       {/* Stats */}
