@@ -17,7 +17,7 @@ const StudentDashboard = () => {
 
       <DashboardHero
         title={`Welcome Back, ${users[0].firstName}!`}
-        subtitle1="Grade 10 • Academic Year 2025 - 2026"
+        subtitle1="Grade 10 • Academic Year 2025-2026"
         subtitle2="Track your academic progress, assignments, attendance, and daily schedule in one place."
       />
 
