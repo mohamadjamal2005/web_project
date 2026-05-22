@@ -1,26 +1,23 @@
 import SchoolIcon from "@mui/icons-material/School";
 import AssignmentIcon from "@mui/icons-material/Assignment";
-import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import GradeIcon from "@mui/icons-material/Grade";
+import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 
+import DashboardHero from "../../components/dashboard/DashboardHero";
 import StatCard from "../../components/dashboard/StatCard";
+import ProgressCard from "../../components/dashboard/ProgressCard";
+import AnalyticsChart from "../../components/dashboard/AnalyticsChart";
+import ScheduleCard from "../../components/dashboard/ScheduleCard";
 import AnnouncementCard from "../../components/dashboard/AnnouncementCard";
 
 const StudentDashboard = () => {
   return (
     <div className="space-y-8">
 
-      {/* Header */}
-      <div>
-        <h1 className="text-3xl xl:text-4xl font-bold text-gray-800">
-          Welcome Back
-        </h1>
-
-        <p className="text-gray-500 mt-2 text-lg">
-          Track your academic progress, assignments,
-          and daily schedule in one place.
-        </p>
-      </div>
+      <DashboardHero
+        title="Student Dashboard"
+        subtitle="Track your academic progress, assignments, attendance, and daily schedule in one place."
+      />
 
       {/* Stats */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
@@ -51,60 +48,78 @@ const StudentDashboard = () => {
 
       </div>
 
-      {/* Main Grid */}
+      {/* Progress */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <ProgressCard
+          title="Attendance Progress"
+          value={92}
+          color="bg-green-500"
+        />
+
+        <ProgressCard
+          title="Academic Performance"
+          value={88}
+          color="bg-blue-600"
+        />
+
+      </div>
+
+      {/* Chart + Schedule */}
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
 
-        {/* Announcements */}
-        <div className="bg-white rounded-2xl shadow-sm p-6 xl:col-span-2">
-
-          <h2 className="text-2xl font-bold mb-6">
-            Announcements
-          </h2>
-
-          <AnnouncementCard
-            title="Math exam next Monday"
-            date="Today"
-          />
-
-          <AnnouncementCard
-            title="Science fair registration opened"
-            date="Yesterday"
-          />
-
+        <div className="xl:col-span-2">
+          <AnalyticsChart />
         </div>
 
-        {/* Schedule */}
         <div className="bg-white rounded-2xl shadow-sm p-6">
 
           <h2 className="text-2xl font-bold mb-6">
-            Today's Classes
+            Today's Schedule
           </h2>
 
           <div className="space-y-4">
 
-            <div className="border-l-4 border-blue-600 pl-4">
-              <p className="font-semibold">
-                Mathematics
-              </p>
+            <ScheduleCard
+              subject="Mathematics"
+              time="08:00 AM - 09:30 AM"
+              color="border-blue-600"
+            />
 
-              <p className="text-sm text-gray-500">
-                8:00 AM - 9:30 AM
-              </p>
-            </div>
+            <ScheduleCard
+              subject="Physics"
+              time="10:00 AM - 11:30 AM"
+              color="border-green-600"
+            />
 
-            <div className="border-l-4 border-green-600 pl-4">
-              <p className="font-semibold">
-                Physics
-              </p>
-
-              <p className="text-sm text-gray-500">
-                10:00 AM - 11:30 AM
-              </p>
-            </div>
+            <ScheduleCard
+              subject="Chemistry"
+              time="01:00 PM - 02:00 PM"
+              color="border-purple-600"
+            />
 
           </div>
 
         </div>
+
+      </div>
+
+      {/* Announcements */}
+      <div className="bg-white rounded-2xl shadow-sm p-6">
+
+        <h2 className="text-2xl font-bold mb-6">
+          Announcements
+        </h2>
+
+        <AnnouncementCard
+          title="Math exam next Monday"
+          date="Today"
+        />
+
+        <AnnouncementCard
+          title="Science fair registration opened"
+          date="Yesterday"
+        />
 
       </div>
 

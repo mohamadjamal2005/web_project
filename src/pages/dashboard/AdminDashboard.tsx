@@ -2,25 +2,27 @@ import PeopleIcon from "@mui/icons-material/People";
 import SchoolIcon from "@mui/icons-material/School";
 import GroupsIcon from "@mui/icons-material/Groups";
 import AnalyticsIcon from "@mui/icons-material/Analytics";
+import PersonAddIcon from "@mui/icons-material/PersonAdd";
+import ReportIcon from "@mui/icons-material/Report";
 
+import DashboardHero from "../../components/dashboard/DashboardHero";
 import StatCard from "../../components/dashboard/StatCard";
-import AnnouncementCard from "../../components/dashboard/AnnouncementCard";
+import ProgressCard from "../../components/dashboard/ProgressCard";
+import AnalyticsChart from "../../components/dashboard/AnalyticsChart";
+import QuickActionCard from "../../components/dashboard/QuickActionCard";
+import ActivityCard from "../../components/dashboard/ActivityCard";
 
 const AdminDashboard = () => {
   return (
     <div className="space-y-8">
 
-      <div>
-        <h1 className="text-4xl font-bold text-gray-800">
-          Admin Dashboard
-        </h1>
+      {/* Hero */}
+      <DashboardHero
+        title="Admin Dashboard"
+        subtitle="Monitor school operations, manage users, analyze performance, and oversee the entire academic system."
+      />
 
-        <p className="text-gray-500 mt-2">
-          School management overview
-        </p>
-      </div>
-
-      {/* Stats */}
+      {/* Statistics */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
 
         <StatCard
@@ -49,21 +51,143 @@ const AdminDashboard = () => {
 
       </div>
 
-      {/* Announcements */}
-      <div className="bg-white rounded-2xl shadow-sm p-6">
+      {/* Progress Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        <h2 className="text-2xl font-bold mb-6">
-          System Announcements
-        </h2>
-
-        <AnnouncementCard
-          title="New semester starts next month"
-          date="Today"
+        <ProgressCard
+          title="System Performance"
+          value={98}
+          color="bg-green-500"
         />
 
-        <AnnouncementCard
-          title="Teachers meeting scheduled"
-          date="Yesterday"
+        <ProgressCard
+          title="Academic Completion"
+          value={87}
+          color="bg-blue-600"
+        />
+
+      </div>
+
+      {/* Chart + System Status */}
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
+
+        {/* Chart */}
+        <div className="xl:col-span-2">
+          <AnalyticsChart />
+        </div>
+
+        {/* System Status */}
+        <div className="bg-white rounded-2xl shadow-sm p-6">
+
+          <h2 className="text-2xl font-bold mb-6">
+            System Status
+          </h2>
+
+          <div className="space-y-5">
+
+            <div className="flex items-center justify-between">
+
+              <span className="text-gray-600">
+                Server Status
+              </span>
+
+              <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
+                Online
+              </span>
+
+            </div>
+
+            <div className="flex items-center justify-between">
+
+              <span className="text-gray-600">
+                Academic Year
+              </span>
+
+              <span className="font-semibold text-gray-800">
+                2025 - 2026
+              </span>
+
+            </div>
+
+            <div className="flex items-center justify-between">
+
+              <span className="text-gray-600">
+                Active Users
+              </span>
+
+              <span className="font-semibold text-gray-800">
+                1,331
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* Quick Actions */}
+      <div>
+
+        <h2 className="text-2xl font-bold mb-6">
+          Quick Actions
+        </h2>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+          <QuickActionCard
+            title="Add User"
+            icon={<PersonAddIcon />}
+          />
+
+          <QuickActionCard
+            title="Manage Classes"
+            icon={<SchoolIcon />}
+          />
+
+          <QuickActionCard
+            title="Analytics"
+            icon={<AnalyticsIcon />}
+          />
+
+          <QuickActionCard
+            title="Reports"
+            icon={<ReportIcon />}
+          />
+
+        </div>
+
+      </div>
+
+      {/* Recent Activity */}
+      <div className="bg-white rounded-2xl shadow-sm p-6">
+
+        <div className="flex items-center justify-between mb-6">
+
+          <h2 className="text-2xl font-bold">
+            Recent Activity
+          </h2>
+
+          <button className="text-blue-600 font-medium hover:underline">
+            View All
+          </button>
+
+        </div>
+
+        <ActivityCard
+          activity="New instructor account created"
+          time="20 minutes ago"
+        />
+
+        <ActivityCard
+          activity="Grade 11 schedule updated"
+          time="Today"
+        />
+
+        <ActivityCard
+          activity="System report generated"
+          time="Yesterday"
         />
 
       </div>
