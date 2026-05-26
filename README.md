@@ -141,7 +141,7 @@ git clone https://github.com/mohamadjamal2005/web_project
 ## 2️⃣ Navigate to the project
 
 ```bash
-cd mjx-school-system
+cd web_project
 ```
 
 ---
