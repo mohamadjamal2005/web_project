@@ -2,14 +2,11 @@ import PeopleIcon from "@mui/icons-material/People";
 import SchoolIcon from "@mui/icons-material/School";
 import GroupsIcon from "@mui/icons-material/Groups";
 import AnalyticsIcon from "@mui/icons-material/Analytics";
-import PersonAddIcon from "@mui/icons-material/PersonAdd";
-import ReportIcon from "@mui/icons-material/Report";
 
 import DashboardHero from "../../components/dashboard/DashboardHero";
 import StatCard from "../../components/dashboard/StatCard";
 import ProgressCard from "../../components/dashboard/ProgressCard";
 import AnalyticsChart from "../../components/dashboard/AnalyticsChart";
-import QuickActionCard from "../../components/dashboard/QuickActionCard";
 import ActivityCard from "../../components/dashboard/ActivityCard";
 
 import { users } from "../../data/users";
@@ -125,39 +122,6 @@ const AdminDashboard = () => {
             </div>
 
           </div>
-
-        </div>
-
-      </div>
-
-      {/* Quick Actions */}
-      <div>
-
-        <h2 className="text-2xl font-bold mb-6">
-          Quick Actions
-        </h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-
-          <QuickActionCard
-            title="Add User"
-            icon={<PersonAddIcon />}
-          />
-
-          <QuickActionCard
-            title="Manage Classes"
-            icon={<SchoolIcon />}
-          />
-
-          <QuickActionCard
-            title="Analytics"
-            icon={<AnalyticsIcon />}
-          />
-
-          <QuickActionCard
-            title="Reports"
-            icon={<ReportIcon />}
-          />
 
         </div>
 
