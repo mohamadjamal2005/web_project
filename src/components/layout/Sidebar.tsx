@@ -3,7 +3,7 @@ import mjx_school from "../../assets/mjx_school.png";
 import {
   studentSidebar,
   instructorSidebar,
-  adminSidebar,
+  adminSidebar
 } from "../../data/sidebar";
 
 import { getUser } from "../../utils/auth";
@@ -28,7 +28,7 @@ const Sidebar = () => {
 
         <img
           src={mjx_school}
-          alt="MJX School"
+          alt="MJX School Logo"
           className="h-32 object-contain"
         />
 
