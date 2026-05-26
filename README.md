@@ -35,7 +35,6 @@ src/
 │   ├── dashboard/
 │   └── layout/
 ├── data/
-├── hooks/
 ├── layouts/
 │   ├── AuthLayout.tsx
 │   └── MainLayout.tsx
